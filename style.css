@@ -5,12 +5,14 @@
     body { font-family: 'Lato'; background: linear-gradient( rgba(207, 221, 245, 0.5),rgba(215, 255, 255, 0.5),rgba(255, 255, 255, 0.5)); background-repeat: no-repeat; }
 
     /* HEADING TAGS */
-    h1 { color:rgba(15, 37, 73, 1); font-size: 64px; font-weight: bold;}
-    h2 { color: rgba(15, 37, 73, 1); font-weight: bold;} 
-    h3 { color: rgba(15, 37, 73, 1); }
+    h1 { color:rgba(15, 37, 73, 1); font-size: 64px; font-weight: bold; line-height: 64px; letter-spacing: -0.01em;}
+    h2 h3 { color: rgba(15, 37, 73, 1);} 
     h1 span { color:rgba(21, 145, 145, 1); font-size: 64px; }
     h2 span, h3 span { color:rgba(21, 145, 145, 1); font-weight: bold; } 
     p { color:#0f2549 ; font-size: 16px; line-height: 24px; letter-spacing: -0.01em; text-align: left; font-weight: 400; }
+
+    /* HEADER */
+    header { margin-top: 2rem; margin-bottom: 4rem;}
 
     /* RNK COMP > LISTA DESTAQUE*/
     .rnk-comp-lista-destaque ul { display: flex; background: linear-gradient(rgba(215, 255, 255, 0.5),rgba(207, 221, 245, 0.5)); padding: 24px; border-radius: 32px; }
@@ -18,15 +20,43 @@
     .rnk-comp-lista-destaque ul li:first-child { list-style-type: none;color: #0f2549; }
     .rnk-comp-lista-destaque ul li:nth-child(2) { list-style-type: none;color: #0f2549; }
     .rnk-comp-lista-destaque ul li:last-child { list-style-type: none;color: #0f2549; }
+    
+    .rnk-comp-lista-destaque ul li 
 
+    /* RNK COMP > COMPARAÇÃO */
+    .rnk-comp-comparacao { margin-top: 128px; padding-left: 185px; padding-right: 185px ;}
+    .rnk-comp-comparacao h2 { color: #0f2549;text-align: center; font-size: 48px;line-height: 57.6px; letter-spacing: -0.01em; text-align: center;font-weight: 900; margin-bottom: 2rem;}
+    .rnk-comp-comparacao p { text-align: center;}
+
+    /* RANK COMP > SELECIONAR ESPECIALIDADE */
+    .rnk-bg-especialidade { background-color: rgba(6, 15, 35, 1); color: white; border-radius: 32px; padding: 64px; gap: 64px; margin-bottom: 2rem;}
+    .rnk-bg-especialidade-2 {  padding-left: 220px; padding-right: 220px; }
+    .rnk-bg-especialidade h2 { text-align: center;font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; margin-bottom: 2rem;}
+    .rnk-bg-especialidade p { text-align: center; color: white; margin-bottom: 2rem;}
+    .rnk-bg-especialidade .rnk-buscas { font-size: 64px; margin-top: 2rem; font-weight: 700; line-height: 78.8px;}
+   
+
+    /* RNK COMP > PERGUNTAS */
+    .rnk-bg-perguntas {color: white; background-color:rgba(23, 31, 52, 1); border-top-left-radius: 32px; border-top-right-radius: 32px; padding: 128px 113px;}
+    .rnk-bg-perguntas h2 {color: rgba(255, 255, 255, 1); font-size: 16px; line-height: 19.2px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 113px; padding-right:113px ;}
+    .rnk-bg-perguntas h3 {color: rgba(255, 255, 255, 1);font-size: 48px; line-height: 57.7px; font-weight: 900;letter-spacing: -0.01em; text-align: center; }
+    .rnk-bg-perguntas p {color: rgba(255, 255, 255, 1); font-size: 16px;line-height: 24px;letter-spacing: -0.01em; text-align: center;padding-left: 111px; padding-right:111px; margin-top: 2rem; font-weight: 400}
+    .rnk-bg-perguntas .p-mobile { display: none; }
+    .rnk-bg-perguntas .rnk-bg-lista { background-image: url('Medico-na-Mesa_3\ 1.png'); padding-top: 434px; background-size: contain; background-repeat: no-repeat; margin-left: -212px ; margin-right: -212px;}
+    .rnk-bg-perguntas .rnk-bg-lista ul { text-align: center; list-style-type: none; padding: 0;  max-width: 57%; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem;}
+    .rnk-bg-perguntas .rnk-bg-lista ul li { background: rgba(88, 73, 66, 0.2); backdrop-filter: blur(112px); border: 1px solid transparent; border-radius: 16px; margin: 8px; padding: 24px;}
+   
     /* RNK COMP > AGENDAR REUNIÃO */
-    .rnk-comp-agendar-reuniao { margin: auto; width:100%; padding: 50px;  background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px ;border-bottom-right-radius: 32px ;}
-    .rnk-comp-agendar-reuniao h3 { font-size: 16px; text-align: center;}
-    .rnk-comp-agendar-reuniao p { font-size: 48px; line-height: 57.8px; letter-spacing: -0.01em; text-align: center; font-weight: bold;}
+    .rnk-comp-agendar-reuniao {  background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px ;border-bottom-right-radius: 32px ;padding: 128px 225px;}
+    .rnk-comp-agendar-reuniao h3 { font-size: 16px; text-align: center; font-weight: 900;}
+    .rnk-comp-agendar-reuniao p { font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; text-align: center; font-weight: 900; }
+    
+    
 
     /* FOOTER */
     .rnk-comp-footer { margin-top: 8rem; }
     .rnk-comp-footer h1 { display: none ; }
+    p span { text-decoration: underline;}
 
     /* MEDIA */
     @media (max-width:992px) {
@@ -36,16 +66,33 @@
     @media (max-width:768px) {
     .rnk-comp-lista-destaque ul { flex-direction: column; }
     .rnk-comp-lista-destaque ul li { padding-left: 0; padding-top: 48px; }
+    .rnk-comp-agendar-reuniao { padding: 64px 24px;}
     .rnk-comp-footer p { padding-top: 1rem; text-align: center; }
     }
 
     @media (max-width: 576px) {
-    .logo {  }
-    h1 { font-size: 32px; font-weight: bold; text-align: center;}
+    h1 { font-size: 32px; font-weight: 900; text-align: center; line-height: 32px; letter-spacing: -0.01em;}
     h1 span { font-size: 32px; }
     p { text-align: center;}
-    .rnk-barra-fixa { position: fixed; background-blend-mode: normal; background-color: rgba(15, 37, 73, 1);width: 100%; bottom: 0; left: 0; right: 0; text-align: center; }   
+    header {margin-top: 2rem; margin-bottom: 2rem;}
+    .logo { flex-direction: column;}
+    .rnk-barra-fixa { position: fixed; background-blend-mode: normal; background-color: rgba(15, 37, 73, 1);width: 100%; bottom: 0; left: 0; right: 0; text-align: center;}
+    .rnk-comp-comparacao { padding: 0;}
+    .rnk-comp-comparacao h2 { text-align: center; font-size: 24px;line-height: 28.8px; letter-spacing: -0.01em; text-align: center;font-weight: 900;}
+    .rnk-comp-comparacao p { margin: 40px;}
+    .rnk-bg-especialidade h2  { text-align: center;font-size: 24px; line-height: 24px; letter-spacing: -0.01em;font-weight: 900; margin-bottom: 2rem; }
+    .rnk-bg-especialidade-2 { padding: 0;}
+    .rnk-bg-perguntas {color: white; background-color:rgba(23, 31, 52, 1); border-top-left-radius: 32px; border-top-right-radius: 32px; padding-top: 64px; padding-left: 24px; padding-right: 24px; padding-bottom: 50px;margin-left: -12px; margin-right: -12px;}
+    .rnk-bg-perguntas h2 { color: rgba(255, 255, 255, 1); font-size: 12px; line-height: 18px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; padding-bottom: 2rem;}
+    .rnk-bg-perguntas h3 { color: rgba(255, 255, 255, 1); font-size: 24px; line-height: 28.8px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; }
+    .rnk-bg-perguntas p { color: rgba(255, 255, 255, 1); font-size: 16px; line-height: 28.8px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; margin-top: 4rem}
+    .rnk-bg-perguntas .rnk-bg-lista { margin-left: 0px; margin-right: 0px;         padding-top: 280px; background-size: 950px; background-position: top center; background-repeat: no-repeat; margin-left: -24px; margin-right: -24px; }
+    .rnk-bg-perguntas .p-mobile {display: block; padding-left: 48px; padding-right: 48px;}
+    .rnk-bg-perguntas .rnk-bg-lista ul { text-align: center; list-style-type: none; padding: 0; margin: 0 24px; max-width: 100%; }
+    .rnk-comp-agendar-reuniao { margin-left: -12px; margin-right: -12px;}
+    .rnk-comp-agendar-reuniao h3 { font-size: 12px; }
+    .rnk-comp-agendar-reuniao p { font-size: 24px; line-height: 28.8px; letter-spacing: -0.01em; font-weight: 900; margin-bottom: 2rem;}
     .rnk-comp-footer { flex-direction: column; margin-top: 4rem; }
-    .rnk-comp-footer p { padding-top: 1rem; text-align: center; }
+    .rnk-comp-footer p { padding-top: 1rem; text-align: center; padding-left: 3rem; padding-right: 3rem;}
     .rnk-copyright { padding-bottom: 4rem; }
     }
