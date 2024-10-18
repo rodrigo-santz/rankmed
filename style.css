@@ -2,154 +2,336 @@
     @font-face { font-family: 'Lato'; src: url('fonts/Lato/Lato-Regular.ttf') format('truetype'); font-weight: normal; }
 
     /* BODY */
-    body { font-family: 'Lato'; background: linear-gradient( rgba(207, 221, 245, 0.5),rgba(215, 255, 255, 0.5),rgba(255, 255, 255, 0.5)); background-repeat: no-repeat; }
-
+    body { font-family: 'Lato'; background-repeat: no-repeat; }
 
     /* HEADING TAGS */
-    h1 { color:rgba(15, 37, 73, 1); font-size: 64px; font-weight: bold; line-height: 64px; letter-spacing: -0.01em; margin-bottom: 2rem;}
-    h2 h3 { color: rgba(15, 37, 73, 1);} 
-    h1 span { color:rgba(21, 145, 145, 1); }
-    h2 span, h3 span { color:rgba(21, 145, 145, 1); font-weight: bold; } 
-    p { color:#0f2549 ; font-size: 16px; line-height: 24px; letter-spacing: -0.01em; text-align: left; font-weight: 400; }
+    h1 { color:#0f2549; font-size: 4rem; font-weight: bold; line-height: 4rem; letter-spacing: -0.01em; margin-bottom: 2rem;}
+    h2 h3 { color: #0f2549;} 
+    h1 span { color:#159191; }
+    p { color:#0f2549 ; font-size: 16px; line-height: 24px; text-align: left; font-weight: 400; margin-bottom: 0;}
 
+    /* ANCORA */
+    a { color: #0f2549;}
+    
     /* HEADER */
     header { margin-top: 2rem; margin-bottom: 4rem;}
 
-    
 
     /* RNK CONTAINER DESTAQUE */
-    .rnk-comp-lista-destaque { position: absolute; bottom: 0; width: 100%; }
+    .rnk-destaque-lista { position: absolute; bottom: -36px; width: 100%; }
 
-    /* RNK COMP > LISTA DESTAQUE*/
-    .rnk-comp-lista-destaque ul { display: flex; gap: 4rem;justify-content: space-between;background: linear-gradient(rgba(215, 255, 255, 0.5),rgba(207, 221, 245, 0.5));backdrop-filter: blur(32px); padding: 2rem; border-radius: 32px; margin-bottom: 0; position: relative;}
-    .rnk-comp-lista-destaque ul::after { content: ''; position: absolute; height: 100%; width: 100%; bottom: 0; left: 0;border-radius: 32px; border-bottom: 1px solid rgba(123, 171, 247, 1);}
-    .rnk-comp-lista-destaque ul li { display: flex; flex-direction: row-reverse; align-items: center; gap: 2rem;}
-    .rnk-comp-lista-destaque ul li:first-child { list-style-type: none; color: #0f2549; }
-    .rnk-comp-lista-destaque ul li:nth-child(2) { list-style-type: none; color: #0f2549; }
-    .rnk-comp-lista-destaque ul li:last-child { list-style-type: none; color: #0f2549; }
-    .rnk-comp-lista-destaque ul li svg { min-width: 24px; min-height: 24px;}
+    /* RNK CONTAINER DESTAQUE> LISTA */
+    .rnk-destaque-lista ul { display: flex;background: linear-gradient(#d7ffff80,#cfddf580);backdrop-filter: blur(32px); border-radius: 32px; margin-bottom: 0; position: relative; padding: 0;}
+    .rnk-destaque-lista ul::after { content: ''; position: absolute; height: 100%; width: 100%; bottom: 0; left: 0;border-radius: 32px; border-bottom: 1px solid #7babf7;}
+    .rnk-destaque-lista ul li { display: flex;flex-direction: row-reverse; align-items: center; gap: 2rem; flex: 1; min-width: 0; padding: 2rem;}
+    .rnk-destaque-lista ul li:first-child { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(2) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(3) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:last-child {background-color: #0f2549; color: white; border-radius: 0 32px 32px 0; position: static; z-index: 1;}
+    .rnk-destaque-lista ul li svg { min-width: 1.5rem; min-height: 1.5rem;}
+    .rnk-btn-ul { position: relative; z-index: 1; text-align: center;}
 
-    /* RNK COMP > COMPARAÇÃO */
-    .rnk-comp-comparacao { margin-top: 8rem; padding-left: 185px; padding-right: 185px;}
-    .rnk-comp-comparacao h2 { color: #0f2549;text-align: center; font-size: 48px;line-height: 57.6px; letter-spacing: -0.01em; text-align: center;font-weight: 900; margin-bottom: 2rem;}
-    .rnk-comp-comparacao p { text-align: center; margin-bottom: 0;}
 
-    /* RNK > CARD */
-    .rnk-card { border-style: none;}
-    .rnk-card-space { margin-top: 1rem; }
 
-    /* RANK COMP > SELECIONAR ESPECIALIDADE */
-    .rnk-bg-especialidade { background-color: rgba(6, 15, 35, 1); color: white; border-radius: 32px; padding: 64px; gap: 64px; }
-    .rnk-bg-especialidade-2 {  padding-left: 220px; padding-right: 220px; }
-    .rnk-bg-especialidade h2 { text-align: center;font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; margin-bottom: 2rem;}
-    .rnk-bg-especialidade p { text-align: center; color: white; margin-bottom: 2rem;}
-    .rnk-select { text-align: center; max-width: 300px; display: flex; margin: 0 auto; }
-    .rnk-bg-especialidade .rnk-buscas { font-size: 64px; margin-top: 2rem; font-weight: 700; line-height: 78.8px;}
-    .rnk-video { text-align: center;position: relative; overflow: hidden; width: 100%; padding-top: 56.25%; }
-    .rnk-responsive-iframe {position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 472; border-radius: 32px;}
+    /* RNK CONTAINER > AVALIAÇÃO */
+    .rnk-container-avaliacao { margin-top: 8rem; }
+    .rnk-container-avaliacao h2 { margin-bottom: 2rem; font-size: 3rem; line-height: 3rem; font-weight: 900; color: #0f2549; }
+    .rnk-container-avaliacao p { margin-bottom: 4rem; font-size: 1rem; color: #0f2549; }
 
-    /* RNK COMP > PERGUNTAS */
-    .rnk-bg-perguntas {color: white; background-color:rgba(23, 31, 52, 1); border-top-left-radius: 32px; border-top-right-radius: 32px; padding: 128px 113px;}
-    .rnk-bg-perguntas h2 {color: rgba(255, 255, 255, 1); font-size: 16px; line-height: 19.2px; letter-spacing: -0.01em; text-align: center; padding-left: 113px; padding-right:113px ;font-weight: 900;}
-    .rnk-bg-perguntas h3 {color: rgba(255, 255, 255, 1);font-size: 48px; line-height: 57.7px; font-weight: 900;letter-spacing: -0.01em; text-align: center; }
-    .rnk-bg-perguntas p {color: rgba(255, 255, 255, 1); font-size: 16px;line-height: 24px;letter-spacing: -0.01em; text-align: center;padding-left: 111px; padding-right:111px; margin-top: 2rem; font-weight: 400; margin-bottom: 4rem;}
-    .rnk-bg-perguntas .p-mobile { display: none; } 
-    .rnk-bg-perguntas .rnk-bg-lista {position: relative; }
-    .rnk-bg-perguntas .rnk-bg-lista img { position: absolute; top: 0; z-index: 2; left: 50%; transform: translateX(-50%); max-width: calc(100% + 422px);}
-    .rnk-bg-perguntas .rnk-bg-lista ul { position: relative; text-align: center; list-style-type: none; padding: 453px 0 0 0;  max-width: 75%; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem; z-index: 4;}
-    .rnk-bg-perguntas .rnk-bg-lista ul li { background: rgba(88, 73, 66, 0.2); backdrop-filter: blur(112px); border: 1px solid transparent; border-radius: 16px; margin: 0; text-align: left; display: flex; flex-direction: row; align-items: center; padding: 2px;}
-    .rnk-bg-perguntas li svg { vertical-align: middle; margin: 24px; width: 24px; height: 24px;}
+
+    /* RNK CONTAINER AVALIAÇÃO > RNK CARD AVALIAÇÃO */   
+    .rnk-container-avaliacao .rnk-card-avaliacao { display: flex; justify-content: center; gap: 1.5rem; max-width: 19.125rem;}
+    .rnk-container-avaliacao .rnk-card-avaliacao div { display: flex; flex-direction: column; align-items: center; gap: 2rem; padding: 0 2rem;}
+    .rnk-container-avaliacao .rnk-card-avaliacao div p { order: 4; text-align: center;}
+    .rnk-container-avaliacao .rnk-card-avaliacao div strong { order: 3; font-size: 1rem; font-weight: 900;text-transform: uppercase; text-align: center;color: #0f2549; }
+    .rnk-container-avaliacao .rnk-card-avaliacao div strong span { display: block;font-size: 3rem; line-height: 3rem; color: #0f2549; margin-bottom: .5rem;}
+    .rnk-container-avaliacao .rnk-card-avaliacao div svg:first-of-type { order: 2; width: 240px;}
+    .rnk-container-avaliacao .rnk-card-avaliacao div svg:last-of-type { order: 1; }
+
+
+
+    /* RNK CONTAINER ESPECIALIDADE */
+    .rnk-container-especialidades { background: linear-gradient(#e7eefa,#eafeff ); border-radius:32px; padding: 2rem; margin-bottom: 8rem;}
+       
+    /* RNK CONTAINER ESPECIALIDADE >  HEADER */
+    .rnk-especialidades-header { display: flex; flex-direction: column; align-items: center; gap: 3rem ;max-width: 53.5rem; padding-top: 6rem; margin: 0 auto 4rem;}
+    .rnk-container-especialidades h2 { color: #0f2549; font-size: 3rem; line-height: 3rem; font-weight: 900; text-align: center; margin-bottom: 0;}
+    .rnk-container-especialidades p { color: #0f2549; font-size: 1rem; line-height: 1.5rem; text-align: center; font-weight: 400; max-width: 600px;}
+    .rnk-container-especialidades select { border-radius: 3rem; background-color: transparent; color: #0f2549; font-size: 16px; font-weight: 400; border: 1px solid #0f2549; width: 274px; }
+    .rnk-container-especialidades iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border-radius: 2rem;}
+    .rnk-dados-e-midia { position: relative; }
+    .rnk-container-especialidades button { background: transparent; border: none; position: absolute; top: 1.5rem; right: 1.5rem;}
+
+    /* RNK CONTAINER ESPECIALIDADE > DADOS */
+    .rnk-dados-especialidades { position: absolute; top: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;background-color: #0f2549; width: 100% ; border-radius: 2rem; padding: 7rem 2rem; gap: 2rem; margin-bottom: 2rem;}
+    .rnk-dados-especialidades .rnk-dados-quantidade .rnk-dados-numero { font-size: 16rem; line-height: 16rem;font-weight: 700; color: #FFFFFF;}
+    .rnk-dados-especialidades .rnk-dados-quantidade .rnk-dados-dia { color: #FFFFFF; font-weight: 400}
+    .rnk-dados-especialidades .rnk-dados-conteudo { color: #FFFFFF; }
+
+
+
+    /* RNK CONTAINER REPERTÓRIO */
+    .rnk-container-repertorio h2 { font-size: 3rem; line-height: 3rem; text-align: center; font-weight: 900; color: #0f2549; margin-bottom: 2rem;}
+    .rnk-container-repertorio p { font-size: 1rem; line-height: 1.5rem; color: #0f2549; text-align: center; }
+
+    /* RNK CONTAINER REPERTÓRIO > LISTA REPERTÓRIO */
+    .rnk-container-repertorio ul { display: flex; padding: 4rem 0; margin-bottom: 0; position: relative; gap: 2rem; margin-bottom: 4rem;}
+    .rnk-container-repertorio ul li {display: flex; flex-direction: column-reverse; justify-content: start;  text-align: center;align-items: center; gap: 2rem; padding: 0 2rem;}
+    .rnk-container-repertorio svg { max-width: 170px; }
+
+
+
+    /* RNK CONTAINER PERGUNTAS */
+    .rnk-container-perguntas { color: #FFFFFF; background-color:#171f34; border-radius: 2rem 2rem 0 0; padding: 8rem 7.0625rem; }
+
+    /* RNK CONTAINER PERGUNTAS > HEADER*/
+    .rnk-perguntas-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3rem;}
+    .rnk-container-perguntas .rnk-perguntas-header h2 {color: #FFFFFF; font-size: 1rem; text-align: center; font-weight: 900; margin: 0;}
+    .rnk-container-perguntas .rnk-perguntas-header h3 {color: #FFFFFF;font-size: 3rem; line-height: 3rem; font-weight: 900; text-align: center; margin: 0;}
+    .rnk-container-perguntas .rnk-perguntas-header p {color: #FFFFFF; font-size: 1rem;line-height: 1.5rem;letter-spacing: -0.01em; text-align: center; font-weight: 400; max-width: 600px;}
+
+
+
+    /* RNK CONTAINER PERGUNTAS > LISTA */
+    .rnk-container-perguntas .rnk-perguntas-lista { width: 100%; margin-bottom: 8rem;}
+    .rnk-container-perguntas .rnk-perguntas-lista img { position: absolute; top: 450px; left: 50%; transform: translateX(-50%); z-index: 2; max-width: calc(120%); }
+    .rnk-container-perguntas .rnk-perguntas-lista ul { position: relative; text-align: center; list-style-type: none; padding: 453px 0 0 0; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem; z-index: 4;}
+    .rnk-container-perguntas .rnk-perguntas-lista ul li { background: #58494233; backdrop-filter: blur(112px); border: 1px solid transparent; border-radius: 1rem; margin: 0; text-align: left; display: flex; flex-direction: row; align-items: center; padding: 2px;}
+    .rnk-container-perguntas .rnk-perguntas-lista li::after { content: ''; position: absolute; height: 100%; width: 100%; bottom: 0; left: 0;border-radius: 1rem; border-top: 1px solid #72655f;}
+    .rnk-container-perguntas li svg { vertical-align: middle; margin: 24px;  min-width: 32px; min-height: 32px;}
+
+
+
+    
+    /* RNK CONTAINER PERGUNTAS > FOOTER */
+    .rnk-perguntas-footer { display: flex; flex-direction: column; align-items: center; max-width: 53rem; margin: 0 auto;}
+    .rnk-perguntas-footer h3 { color: #FFFFFF;font-size: 3rem; line-height: 3rem; font-weight: 900; text-align: center; margin-bottom: 3rem; }
+    .rnk-container-perguntas p {color: #FFFFFF; font-size: 1rem;line-height: 1rem; text-align: center;}
    
-    /* RNK COMP > AGENDAR REUNIÃO */
-    .rnk-comp-agendar-reuniao {  background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px ;border-bottom-right-radius: 32px ;padding: 128px 225px;}
-    .rnk-comp-agendar-reuniao h3 { font-size: 16px; text-align: center; font-weight: 900;}
-    .rnk-comp-agendar-reuniao p { font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; text-align: center; font-weight: 900; }
+    /* RNK CONTAINER AGENDAR REUNIÃO */
+    .rnk-container-agendar-reuniao {display: flex; flex-direction: column; align-items: center; gap: 3rem; background-color: #e8f4f4; border-radius: 0 0 2rem 2rem;padding: 8rem 14.0625rem; margin-bottom: 8rem;}
+    .rnk-container-agendar-reuniao h2{ font-size: 1rem; text-align: center; font-weight: 900; color: #0f2549;}
+    .rnk-container-agendar-reuniao p { font-size: 3rem; line-height: 3rem; text-align: center; font-weight: 900; color: #0f2549;}
     
     
 
     /* FOOTER */
-    .rnk-comp-footer { margin-top: 8rem; margin-bottom: 6rem; }
-    .rnk-comp-footer h1 { display: none ; }
-    p span { text-decoration: underline;}
+    footer {margin-bottom: 6rem;}
 
 
+    /* MODAL */
+    #modalDisponibilidade .modal-content { border: none; background-color: #0f2549; padding: 5rem 2rem 2rem 2rem; border-radius: 1rem;}
+    #modalDisponibilidade .modal-content h2 { font-size: 2rem; line-height: 2rem; font-weight: 900;color: #FFFFFF; margin-bottom: 1.5rem;text-align: center;}
+    #modalDisponibilidade .modal-content .card { padding: 2rem; border-radius: 1rem;}
+    #modalDisponibilidade .modal-content .btn-close { position: absolute; top: 1.5rem; right: 1.5rem;}
 
     /* MEDIA */
     @media (max-width:1400px) {
-    /* HEADING TAGS */
-    h1 { font-size: 48px; line-height: 48px; }
+    /* RNK CONTAINER DESTAQUE */
+    .rnk-container-destaque p { padding-bottom: 0rem; }
+    .rnk-container-destaque p { padding-bottom: 0rem; }
+    .rnk-container-destaque img { margin-bottom: -1.5rem; max-width: 400px; }
 
-    .rnk-comp-agendar-reuniao { background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px;  border-bottom-right-radius: 32px; padding: 108px 143px; }
-    .rnk-comp-agendar-reuniao h3 { font-size: 16px; text-align: center; font-weight: 900;}
-    .rnk-comp-agendar-reuniao p { font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; text-align: center; font-weight: 900; }
-    }
+    /* RNK CONTAINER LITA DESTAQUE */
+    .rnk-destaque-lista { position: initial; }
+    .rnk-destaque-lista ul { flex-direction: row; gap: 0rem; }
+    .rnk-destaque-lista ul li { justify-content: flex-end;  padding: 1.5rem ; border-bottom:  1px solid #7babf740; }   
+    .rnk-destaque-lista ul li:first-child { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(2) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(3) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:last-child {background-color: #0f2549; color: white; border-radius: 0 32px 32px 0; text-align: center; align-items: center;}
+    
+    }  
+    
+
 
     @media (max-width:1200px) {
+    /* HEADING TAGS */
+    h1 { font-size: 53px; line-height: 53px; }
+
     /* RNK CONTAINER DESTAQUE */
-    .rnk-container-destaque p { padding-bottom: 10rem; }
+    .rnk-container-destaque p { padding-bottom: 0rem; }
+    .rnk-container-destaque p { padding-bottom: 0rem; }
+    .rnk-container-destaque img { margin-bottom: -1.5rem; max-width: 400px; }
+    
+    /* RNK CONTAINER LITA DESTAQUE */
+    .rnk-destaque-lista { position: initial; }
+    .rnk-destaque-lista ul { flex-direction: row; gap: 0rem; }
+    .rnk-destaque-lista ul li { justify-content: flex-end;  padding: 1.5rem ; border-bottom:  1px solid #7babf740; }   
+    .rnk-destaque-lista ul li:first-child { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(2) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:nth-child(3) { list-style-type: none; color: #0f2549; }
+    .rnk-destaque-lista ul li:last-child {background-color: #0f2549; color: white; border-radius: 0 32px 32px 0; text-align: center; align-items: center;}
 
 
-    .rnk-comp-agendar-reuniao { background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px;  border-bottom-right-radius: 32px; padding: 108px 143px; }
-    .rnk-comp-agendar-reuniao h3 { font-size: 16px; text-align: center; font-weight: 900;}
-    .rnk-comp-agendar-reuniao p { font-size: 48px; line-height: 57.6px; letter-spacing: -0.01em; text-align: center; font-weight: 900; }
+    
+    /* RNK CONTAINER ESPECIALIDADE > DADOS */
+    .rnk-dados-especialidades .rnk-dados-quantidade .rnk-dados-numero { font-size: 15rem; line-height: 15rem;font-weight: 700; color: #FFFFFF;}
+    
+
+
+    /* RNK CONTAINER > AGENDAR REUNIÃO */
+    .rnk-container-agendar-reuniao { padding: 6rem; }
+
     }
+    
+
 
     @media (max-width:992px) {
     .rnk-titulo h1 { font-size: 48px; font-weight: 900; text-align: left; line-height: 48px; letter-spacing: -0.01em; margin-bottom: 2rem;}
     .rnk-titulo h1 span { font-size: 48px; }
     .rnk-titulo p { margin-bottom: 2rem; margin-top: 2rem;}
-    
 
+
+    
     /* RNK CONTAINER DESTAQUE */
     .rnk-container-destaque p { padding-bottom: 0rem; }
     .rnk-container-destaque img { margin-bottom: -1.5rem; max-width: 400px; }
-    .rnk-comp-lista-destaque { position: initial; }
-    .rnk-comp-lista-destaque ul { flex-direction: column; gap: 0rem; }
-    .rnk-comp-lista-destaque ul li { justify-content: flex-end;  padding: 1.5rem 0; border-bottom:  1px solid rgba(123, 171, 247, 0.25); }
-    .rnk-comp-lista-destaque ul li:last-child { padding-bottom: 0; border-bottom: none; }
-    .rnk-comp-footer p { padding-top: 1rem; text-align: center;}
-    .rnk-comp-agendar-reuniao { background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px;  border-bottom-right-radius: 32px; padding: 100px 90px; }
-    .rnk-comp-agendar-reuniao h3 { font-size: 12px; }
-    .rnk-comp-agendar-reuniao p { font-size: 40px; line-height: 46px; letter-spacing: -0.01em; text-align: center; font-weight: 900; }
+
+    /* RNK CONTAINER LISTA DESTAQUE */
+    .rnk-container-destaque .rnk-destaque-lista { position: initial; }
+    .rnk-container-destaque .rnk-destaque-lista ul { flex-direction: column; gap: 0rem; }
+    .rnk-container-destaque .rnk-destaque-lista ul li { justify-content: flex-end;  padding: 1.5rem 0; border-bottom:  1px solid #7babf740; margin: 0 1.5rem;}   
+    .rnk-container-destaque .rnk-destaque-lista ul li:first-child { list-style-type: none; color: #0f2549; }
+    .rnk-container-destaque .rnk-destaque-lista ul li:nth-child(2) { list-style-type: none; color: #0f2549; }
+    .rnk-container-destaque .rnk-destaque-lista ul li:nth-child(3) { list-style-type: none; color: #0f2549; }
+    .rnk-container-destaque .rnk-destaque-lista ul li:last-child {background-color: #0f2549; color: white; border-radius: 0 0 32px 32px; text-align: center; align-items: center; margin: 0; padding: 1.5rem;}
+
+   
+
+    /* RNK CONTAINER SELECIONAR ESPECIALIDADE */
+    .rnk-container-especialidades { gap: 2rem; padding: 4rem 4rem; margin-bottom: 4rem;}
+      
+    /* RNK CONTAINER ESPECIALIDADE > DADOS */
+    .rnk-dados-especialidades { margin-bottom: 0;}
+    .rnk-dados-especialidades .rnk-dados-quantidade .rnk-dados-numero { font-size: 8rem; line-height: 8rem;font-weight: 700; color: #FFFFFF;}
+    
+    
+    
+    /* RNK CONTAINER REPERTÓRIO > LISTA REPERTÓRIO */
+    .rnk-container-repertorio ul { flex-direction: column }
+
+    /* RNK CONTAINER > PERGUNTAS */
+    .rnk-container-perguntas { gap: 2rem;}
+    .rnk-container-perguntas h3 {font-size: 2.5rem; line-height: 2.5rem;}
+
+
+
+    /* RNK CONTAINER > AGENDAR REUNIÃO */
+    .rnk-container-agendar-reuniao p { font-size: 2.5rem; line-height: 2.5rem;}
+   
+
+
+    /* FOOTER */
+    footer {margin-bottom: 4rem;}
+
     }
 
+
+
     @media (max-width:768px) {
+    /* RNK TITULO */
     .rnk-titulo h1 { font-size: 48px; font-weight: 900; text-align: center; line-height: 48px; letter-spacing: -0.01em;}
     .rnk-titulo h1 span { font-size: 48px; }
     .rnk-titulo p { text-align: center;}
-    .rnk-comp-agendar-reuniao { padding: 64px 24px;}
-    .rnk-comp-footer p { padding-top: 1rem; text-align: center; }
-    .rnk-comp-agendar-reuniao { background-color: rgba(232, 244, 244, 1); border-bottom-left-radius: 32px;  border-bottom-right-radius: 32px; padding: 50px 50px; }
-    .rnk-comp-agendar-reuniao h3 { font-size: 12px; }
-    .rnk-comp-agendar-reuniao p { font-size: 32px; line-height: 32px; letter-spacing: -0.01em; font-weight: 900; margin-bottom: 2rem;}
+
+
+    /* RNK CONTAINER AVALIAÇÃO */
+    .rnk-container-avaliacao h2 { font-size: 1.5rem; line-height: 1.5rem;}
+    .rnk-container-avaliacao p { margin-bottom: 3rem; }
     
+    /* RNK CONTAINER AVALIAÇÃO > RNK CARD AVALIAÇÃO */
+    .rnk-container-avaliacao .rnk-card-avaliacao { justify-content: space-around; max-width: initial;} 
+    .rnk-container-avaliacao .rnk-card-avaliacao div { padding: 0; flex: 1; }
+    .rnk-container-avaliacao .rnk-card-avaliacao div strong { font-size: .75rem; }
+    .rnk-container-avaliacao .rnk-card-avaliacao div strong span { font-size: 1.5rem; line-height: 1.5rem; }
+    .rnk-container-avaliacao .rnk-card-avaliacao div svg:first-of-type { height: 2rem; max-width: 112px;}
+
+
+
+    /* RNK CONTAINER SELECIONAR ESPECIALIDADE */
+    .rnk-container-especialidades { gap: 2rem; padding: 0;}
+    .rnk-container-especialidades h2 { font-size: 1.5rem; line-height: 1.5rem;}
+    
+    /* RNK CONTAINER ESPECIALIDADE > DADOS */
+    .rnk-dados-especialidades {width: 100% ; padding: 3.6rem 1.5rem; gap: 2rem; margin-bottom: 2rem;}
+    .rnk-dados-especialidades .rnk-dados-quantidade .rnk-dados-numero { font-size: 5rem; line-height: 5rem;font-weight: 700; color: #FFFFFF;}
+
+    /* RNK CONTAINER ESPECIALIDADE >  HEADER */
+    .rnk-container-especialidades .rnk-especialidades-header { display: flex; flex-direction: column; align-items: center; gap: 3rem ; padding: 3rem 1.5rem 2rem 1.5rem; margin: 0 auto;}
+
+
+
+    /* RNK CONTAINER REPERTÓRIO */
+    .rnk-container-repertorio h2 { font-size: 1.5rem; line-height: 1.5rem; }
+    .rnk-container-repertorio p { margin-top: 2rem; }
+    .rnk-container-repertorio ul { padding: 3rem 0; margin-bottom: 1rem;}
+
+
+
+    /* RNK CONTAINER PERGUNTAS */
+    .rnk-container-perguntas { padding: 4rem 1.5rem; gap: 2rem; } 
+    .rnk-container-perguntas h2 { font-size: .75rem; }
+    .rnk-container-perguntas h3 { font-size: 1.5rem; line-height: 1.5rem;}
+
+    /* RNK CONTAINER PERGUNTAS > HEADER*/
+    .rnk-perguntas-header {gap: 2rem;}
+    .rnk-container-perguntas .rnk-perguntas-header h2 { font-size: .75rem;}
+    .rnk-container-perguntas .rnk-perguntas-header h3 { font-size: 1.5rem; line-height: 1.5;}
+    .rnk-container-perguntas .rnk-perguntas-header p { margin-bottom: 4rem; }
+    
+    /*  RNK CONTAINER PERGUNTAS > LISTA */
+    .rnk-container-perguntas .rnk-perguntas-lista { width: 100%; margin-bottom: 3rem;}
+
+    /* RNK CONTAINER PERGUNTAS > FOOTER */
+    .rnk-perguntas-footer h3 { font-size: 1.5rem; line-height: 1.5rem; }
+    
+
+
+    /* RNK CONTAINER > AGENDAR REUNIÃO */
+    .rnk-container-agendar-reuniao { padding: 2rem; gap: 2rem;}
+    .rnk-container-agendar-reuniao h2 { font-size: 12px; margin-bottom: 0;}
+    .rnk-container-agendar-reuniao p { font-size: 2rem; line-height: 2rem; }
+   
     }
 
+
+
     @media (max-width: 576px) {
+    /* RNK HEADER */
     header {margin-top: 2rem; margin-bottom: 2rem;}
-    .logo { flex-direction: column;}
+    header .logo { flex-direction: column;}
+
+
+
+    /* RNK TITULO */
+    .rnk-titulo { padding-left: 24px; padding-right: 24px;}
     .rnk-titulo h1 { font-size: 32px; font-weight: 900; text-align: center; line-height: 32px; letter-spacing: -0.01em;}
     .rnk-titulo h1 span { font-size: 32px; }
-    .rnk-titulo p { text-align: center;}   
-    .rnk-barra-fixa { position: fixed; background-blend-mode: normal; background-color: rgba(15, 37, 73, 1);width: 100%; bottom: 0; left: 0; right: 0; text-align: center;}
-    .rnk-comp-comparacao { padding: 0;}
-    .rnk-comp-comparacao h2 { text-align: center; font-size: 24px;line-height: 28.8px; letter-spacing: -0.01em; text-align: center;font-weight: 900;}
-    .rnk-comp-comparacao p { margin: 40px;}
-    .rnk-bg-especialidade h2  { text-align: center;font-size: 24px; line-height: 24px; letter-spacing: -0.01em;font-weight: 900; margin-bottom: 2rem; }
-    .rnk-bg-especialidade-2 { padding: 0;}
-    .rnk-bg-perguntas {color: white; background-color:rgba(23, 31, 52, 1); border-top-left-radius: 32px; border-top-right-radius: 32px; padding-top: 64px; padding-left: 24px; padding-right: 24px; padding-bottom: 50px;margin-left: -12px; margin-right: -12px;}
-    .rnk-bg-perguntas h2 { color: rgba(255, 255, 255, 1); font-size: 12px; line-height: 18px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; padding-bottom: 2rem;}
-    .rnk-bg-perguntas h3 { color: rgba(255, 255, 255, 1); font-size: 24px; line-height: 28.8px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; }
-    .rnk-bg-perguntas p { color: rgba(255, 255, 255, 1); font-size: 16px; line-height: 28.8px; font-weight: 400;letter-spacing: -0.01em; text-align: center; padding-left: 0px; padding-right:0px ; margin-top: 4rem}
-    .rnk-bg-perguntas .p-mobile {display: block; padding: 4rem 1.5rem 0 1.5rem; margin-bottom: 0; margin-top: 0;}
-    .rnk-bg-perguntas .rnk-bg-lista  img { display: none; }
-    .rnk-bg-perguntas .rnk-bg-lista { background-image: url('assets/images/Medico-na-Mesa_3\ -NOVO.png'); padding-top: 453px; background-size: contain; background-repeat: no-repeat; margin-left: -212px ; margin-right: -212px; margin-left: 0px; margin-right: 0px; padding-top: 290px; background-size: 950px; background-position: top center; background-repeat: no-repeat; margin-left: -24px; margin-right: -24px; }
-    .rnk-bg-perguntas .rnk-bg-lista ul { text-align: center; list-style-type: none; padding: 0; margin: 0 24px; max-width: 100%; }
-    .rnk-bg-perguntas .rnk-bg-lista ul li { background: rgba(88, 73, 66, 0.2); backdrop-filter: blur(112px); border: 1px solid transparent; border-radius: 16px; margin: 0; padding: 16px;}
-    .rnk-comp-agendar-reuniao { margin-left: -12px; margin-right: -12px;}
-    .rnk-comp-agendar-reuniao h3 { font-size: 12px; }
-    .rnk-comp-agendar-reuniao p { font-size: 24px; line-height: 28.8px; letter-spacing: -0.01em; font-weight: 900; margin-bottom: 2rem;}
-    .rnk-comp-footer { flex-direction: column; margin-top: 4rem; margin-bottom: 4rem;}
-    .rnk-comp-footer p { padding-top: 1rem; text-align: center; padding-left: 3rem; padding-right: 3rem;}
+    .rnk-titulo p { text-align: center; padding-left: 24px; padding-right: 24px;}
 
+
+    
+    /* RNK BARRA FIXA */
+    .rnk-barra-fixa { position: fixed; background-blend-mode: normal; background-color: #ffffff80; backdrop-filter: blur(32px); padding: 1.5rem; width: 100%; bottom: 0; left: 0; right: 0; text-align: center; z-index: 5;}
+
+
+
+    /* RNK CONTAINER > PERGUNTAS */
+    .rnk-container-perguntas { margin-left: -.75rem; margin-right: -.75rem;}
+
+    /* RNK CONTAINER > PERGUNTAS LISTA*/
+    .rnk-container-perguntas .rnk-perguntas-lista ul { text-align: center; list-style-type: none; padding: 0;  max-width: 100%; }
+    .rnk-container-perguntas .rnk-perguntas-lista ul li { background: #58494233; backdrop-filter: blur(112px); border: 1px solid transparent; border-radius: 16px; margin: 0; padding: 16px;}
+
+
+
+    /* RNK CONTAINER > AGENDAR REUNIÃO */
+    .rnk-container-agendar-reuniao { margin: 0 -.75rem 4rem -.75rem; }
+    .rnk-container-agendar-reuniao p { font-size: 1.5rem; line-height: 1.5rem; }
+
+
+    /* MODAL */
+    #modalDisponibilidade .modal-content { padding: 3.5rem .5rem .5rem .5rem;}
+    #modalDisponibilidade .modal-content h2 { font-size: 1.25rem; line-height: 1.25rem;}
     }
